@@ -1,0 +1,245 @@
+/* Filepath: D:\OFFICE_PROJECT\work\src\components\Home.css */
+.home-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light mode background */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  height: 100vh; /* Adjusted to ensure it fits within the parent */
+  width: calc(100vw-250px); /* Full width */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.dark-mode .home-container {
+  background-color: #222; /* Dark mode background */
+}
+
+.top-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  position: relative;
+  justify-content: space-between; /* Space between the two divs */
+  align-items: flex-start; /* Align items at the start */
+  padding: 20px; /* Add some padding */
+  background-color: #ccc;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Optional: Limit max width for larger screens */
+  height: 30%; /* Ensure it takes full height of home-container */
+  box-sizing: border-box; /* Include padding in height calculations */
+}
+
+.content-container {
+  flex: 1; /* Allow this div to grow */
+  margin-right: 20px; /* Space between content and image */
+  position: relative;
+  height: 100%;
+}
+
+.content-container h1{
+  margin: 0px;
+}
+
+.content-container p{
+  margin: 0px;
+}
+
+.image-container {
+  /* background-color: black; */
+  display: flex;
+  position: relative;
+  flex: 0 0 auto; /* Prevent this div from growing */
+  height: 105%; /* Ensure the image container does not exceed the top container */
+  
+  overflow:hidden; /* Hide overflow if the image is too large */
+  object-fit:cover;
+ justify-content: center;
+}
+
+.image-container img {
+  max-width: 51%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  
+}
+
+.bottom-container {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  background-color: #ccc; /* Light mode background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+
+.bottom-container h2{
+  margin: 0px;
+}
+.dark-mode .bottom-container {
+  background-color: #333; /* Dark mode background */
+  color: #ffffff; /* Light text color */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Dark mode shadow */
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333; /* Light mode text color*/
+}
+
+.dark-mode h2 {
+  color: #ffffff; /* Dark mode text color */
+}
+
+
+
+.file-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative; /* Position for the close icon */
+  width: 100%; /* Full width */
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 2px solid #ccc; /* Light mode border */
+  border-radius: 5px;
+  width: 100%; /* Full width */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+input[type="file"]:focus {
+  border-color: #2196F3; /* Focus border color */
+}
+
+.dark-mode input[type="file"] {
+  border-color: #777; /* Dark mode border */
+  background-color: #555; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+}
+
+.close-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #ff4d4d; /* Red color for the close icon */
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.close-icon:hover {
+  color: #ff1a1a; /* Darker red on hover */
+}
+
+.dark-mode .close-icon {
+  color: #ff9999; /* Light red for dark mode */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2196F3; /* Light mode button background */
+  color: #ffffff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.dark-mode button {
+  background-color: #444; /* Dark mode button background */
+}
+
+.dark-mode button:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+/* Popup styles */
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Smooth transition for popup */
+}
+
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Filepath: D:\OFFICE_PROJECT\work\src\components\Home.css */
+.file-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative; /* Position for the close icon */
+  width: calc(50% - 10px); /* Adjust width for two fields per row */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.file-input .close-icon {
+  margin-left: 10px; /* Space between input and close icon */
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 2px solid #ccc; /* Light mode border */
+  border-radius: 5px;
+  width: 100%; /* Full width */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+input[type="file"]:focus {
+  border-color: #2196F3; /* Focus border color */
+}
+
+.dark-mode input[type="file"] {
+  border-color: #777; /* Dark mode border */
+  background-color: #555; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+}
+
+/* Adjust the container for file inputs to allow wrapping */
+.file-inputs-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of file inputs */
+  gap: 10px; /* Space between inputs */
+}

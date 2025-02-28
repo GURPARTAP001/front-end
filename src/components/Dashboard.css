@@ -1,0 +1,182 @@
+/* Filepath: D:\OFFICE_PROJECT\work\src\components\Dashboard.css */
+.dashboard {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dark-mode .dashboard{
+  background-color: #222; /* Dark mode background */
+  color: #ffffff; /* Light text color */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ffffff; /* Light mode background */
+  color: rgb(6, 2, 2);
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height */
+  border-radius: 5px 5px 0 0; /* Rounded corners only at the top */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.dark-mode .sidebar {
+  background-color: #222; /* Dark mode background */
+  color: #ffffff; /* Light text color */
+  border-radius: 0%;
+}
+
+.logo {
+  height: 50px;
+  margin: 20px auto; /* Center the logo */
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1; /* Allow menu to grow and fill space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between top and bottom sections */
+}
+
+.top-menu, .bottom-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+}
+
+.menu li {
+  margin: 15px 0;
+  cursor: pointer;
+  text-align: center; /* Center text */
+  padding: 10px; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners for menu items */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.menu li:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+
+.dark-mode .menu li:hover {
+  background-color: #444; /* Dark mode hover effect */
+}
+
+/* Link color styling */
+.menu li a {
+  color: black; /* Set link color to black */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.menu li a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+.dark-mode .menu li a {
+  color: #fff;
+}
+
+.main-content {
+  width: calc(100% - 250px); /* Remaining width */
+  background-color: #d2d0d0; /* Light mode background */
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  height: 100vh; /* Full height */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow on the right */
+}
+
+.dark-mode .main-content {
+  background-color: #333; /* Dark mode background */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* Light mode navbar */
+  padding: 10px 20px; /* Optional padding for the navbar */
+  border-bottom: 2px solid #ccc; /* Border at the bottom of the navbar */
+  height: 50px;
+}
+
+.dark-mode .navbar {
+  background-color: #444; /* Dark mode navbar */
+  border-bottom: #222;
+}
+
+.content{
+  /* background-color: #280303; */
+  position: relative;
+  height: 100vh;
+  /* overflow: auto; */
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.search-container {
+  position: relative; /* Position relative for the search icon */
+}
+
+.search-bar {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc; /* Border for the search bar */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.dark-mode .search-bar {
+  background-color: #555; /* Dark mode search bar */
+  color: #ffffff; /* Light text color */
+  border: 1px solid #777; /* Dark mode border */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa; /* Icon color */
+}
+
+.dark-mode .search-icon {
+  color: #ffffff; /* Light icon color in dark mode */
+}
+
+.toggle-btn {
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 0px solid #ccc; /* Border for buttons */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  background-color: #fff; /* Light mode button background */
+}
+
+.profile-btn{
+  background-color: #d8d5d5;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 0px solid #ccc; /* Border for buttons */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.toggle-btn:hover, .profile-btn:hover {
+  background-color: #a1a6d2; /* Light background on hover */
+}
+
+.dark-mode .toggle-btn, .dark-mode .profile-btn {
+  background-color: #555; /* Dark mode button background */
+  color: #ffffff; /* Light text color */
+}
+
+.dark-mode .toggle-btn:hover, .dark-mode .profile-btn:hover {
+  background-color: #666; /* Dark mode hover effect */
+}

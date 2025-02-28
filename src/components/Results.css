@@ -1,0 +1,117 @@
+/* Filepath: D:\OFFICE_PROJECT\work\src\components\Results.css */
+.results-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #d0d0d0;
+    height: 100%;
+    overflow-y:scroll;
+  }
+  
+  .results-header {
+    margin-bottom: 10px;
+    /* background-color: #fff; */
+  }
+
+  .main-table-container{
+   
+    display: flex;
+    flex-direction: column;
+   /* justify-content:space-around; */
+   align-items: center;
+  }
+  
+  .results-table-container1 {
+    height: 40%; /* Set a max height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto;
+    border: 1px solid #ccc; /* Optional: Add a border */
+    background-color: #faf4f4;
+    border-radius: 10px;
+    width: 90%;
+
+  }
+
+  .results-table-container1 h2{
+    margin-left: 10px;
+  }
+  
+  .results-table1 {
+    width: 98%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-collapse: collapse; /* Collapse borders */
+  }
+  
+  .results-table1 th, .results-table1 td {
+    border: 1px solid #ccc; /* Add border to table cells */
+    padding: 10px; /* Add padding */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .results-table1 th {
+    background-color: #d5d5d5; /* Light background for header */
+  }
+
+
+  /* table 2 */
+
+  .results-table-container2 {
+    height: 40%; /* Set a max height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto;
+    border: 1px solid #ccc; /* Optional: Add a border */
+    background-color: #faf4f4;
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 90%;
+
+  }
+
+  .results-table-container2 h2{
+    margin-left: 10px;
+  }
+  
+  .results-table2 {
+    width: 98%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-collapse: collapse; /* Collapse borders */
+  }
+  
+  .results-table2 th, .results-table2 td {
+    border: 1px solid #ccc; /* Add border to table cells */
+    padding: 10px; /* Add padding */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .results-table2 th {
+    background-color: #d5d5d5; /* Light background for header */
+  }
+  
+
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+   
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    
+  }

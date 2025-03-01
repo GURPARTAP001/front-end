@@ -5,15 +5,17 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f9f9f9; /* Light mode background */
+  background-color: #eaeaea; /* Light mode background */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
-  height: 100vh; /* Adjusted to ensure it fits within the parent */
-  width: calc(100vw-250px); /* Full width */
+  height: 100%; 
+  width: 100%; /* Full width */
   box-sizing: border-box; /* Include padding in width/height calculations */
+  overflow: visible;
 }
 
 .dark-mode .home-container {
-  background-color: #222; /* Dark mode background */
+  background-color: #012a71; /* Dark mode background */
+  color: white;
 }
 
 .top-container {
@@ -22,11 +24,17 @@
   justify-content: space-between; /* Space between the two divs */
   align-items: flex-start; /* Align items at the start */
   padding: 20px; /* Add some padding */
-  background-color: #ccc;
+  background-color: #ffffff;
   width: 100%; /* Full width */
-  max-width: 1200px; /* Optional: Limit max width for larger screens */
-  height: 30%; /* Ensure it takes full height of home-container */
+  height: 40%; /* Ensure it takes full height of home-container */
   box-sizing: border-box; /* Include padding in height calculations */
+  border-radius: 25px;
+  color: #005EB8;
+}
+
+.dark-mode .top-container{
+      background-color: #005EB8;
+      color: white;
 }
 
 .content-container {
@@ -34,14 +42,24 @@
   margin-right: 20px; /* Space between content and image */
   position: relative;
   height: 100%;
+  overflow: auto;
+  
 }
+
 
 .content-container h1{
   margin: 0px;
 }
 
 .content-container p{
-  margin: 0px;
+  margin-top: 10px;
+  color: black;
+}
+
+
+.dark-mode .content-container p{
+  margin-top: 10px;
+  color: white;
 }
 
 .image-container {
@@ -49,79 +67,127 @@
   display: flex;
   position: relative;
   flex: 0 0 auto; /* Prevent this div from growing */
-  height: 105%; /* Ensure the image container does not exceed the top container */
-  
+  height: 90%; /* Ensure the image container does not exceed the top container */
+  width: 30%;
   overflow:hidden; /* Hide overflow if the image is too large */
   object-fit:cover;
  justify-content: center;
 }
 
 .image-container img {
-  max-width: 51%; /* Make the image responsive */
+  width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 5px; /* Optional: Add rounded corners */
   
 }
 
 .bottom-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Stack items vertically */
   margin-top: 10px;
   position: relative;
   width: 100%;
-  max-width: 800px;
-  background-color: #ccc; /* Light mode background */
-  border-radius: 8px;
+  /* height: 45%; */
+  background-color: #ffffff; /* Light mode background */
+  border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
   padding: 20px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   box-sizing: border-box; /* Include padding in width calculations */
+  z-index: 1;
 }
 
 
-.bottom-container h2{
-  margin: 0px;
+.bottom-container-heading{
+ display: flex;
+ align-items:flex-start;
+ /* background-color: #a11e1e; */
+ width: 100%;
+ 
 }
+
+.bottom-container h2 {
+  margin: 0; /* Remove margin for h2 */
+  text-align: center; /* Center align the heading text */
+  color: #005EB8;
+}
+
 .dark-mode .bottom-container {
-  background-color: #333; /* Dark mode background */
+  background-color: #005EB8; /* Dark mode background */
   color: #ffffff; /* Light text color */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Dark mode shadow */
 }
 
-h2 {
-  margin-bottom: 20px;
-  color: #333; /* Light mode text color*/
-}
+
 
 .dark-mode h2 {
   color: #ffffff; /* Dark mode text color */
 }
-
-
 
 .file-input {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
   position: relative; /* Position for the close icon */
-  width: 100%; /* Full width */
+  width: 100%; /* Full width for better alignment */
+  max-width: 400px; /* Optional: Set a max width for file inputs */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.file-input .close-icon {
+  margin-left: 10px; /* Space between input and close icon */
 }
 
 input[type="file"] {
   padding: 10px;
-  border: 2px solid #ccc; /* Light mode border */
-  border-radius: 5px;
-  width: 100%; /* Full width */
+  border: 1px solid #00338D; /* Light mode border */
+  border-radius: 20px;
+  width: 100%; /* Full width for better alignment */
   transition: border-color 0.3s ease; /* Smooth transition for border color */
+  
 }
+
+input[type="file"]::file-selector-button {
+  background-color: #00338D; /* Change button color to pink */
+  color: white; /* Text color for the button */
+  border: none; /* Remove border */
+  border-radius: 20px; 
+  padding: 3px; 
+  padding-inline: 10px;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.dark-mode input[type="file"]::file-selector-button{
+  background-color: #6D2077;
+}
+
+
 
 input[type="file"]:focus {
   border-color: #2196F3; /* Focus border color */
 }
 
 .dark-mode input[type="file"] {
-  border-color: #777; /* Dark mode border */
-  background-color: #555; /* Dark mode background */
+  border-color: #ffffff; /* Dark mode border */
+  background-color: #005EB8; /* Dark mode background */
   color: #ffffff; /* Dark mode text color */
 }
+
+/* Adjust the container for file inputs to allow wrapping */
+.file-inputs-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow wrapping of file inputs */
+  gap: 10px; /* Space between inputs */
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
 
 .close-icon {
   position: absolute;
@@ -142,7 +208,7 @@ input[type="file"]:focus {
 
 button {
   padding: 10px 20px;
-  background-color: #2196F3; /* Light mode button background */
+  background-color: #00338D; /* Light mode button background */
   color: #ffffff; /* Button text color */
   border: none;
   border-radius: 5px;
@@ -150,17 +216,18 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
 }
 
+
 button:hover {
-  background-color: #1976D2; /* Darker blue on hover */
+  background-color: #005EB8; /* Darker blue on hover */
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .dark-mode button {
-  background-color: #444; /* Dark mode button background */
+  background-color: #6D2077; /* Dark mode button background */
 }
 
 .dark-mode button:hover {
-  background-color: #555; /* Darker background on hover */
+  background-color: #5d1a65; /* Darker background on hover */
 }
 
 /* Popup styles */
@@ -186,6 +253,21 @@ button:hover {
   transition: transform 0.3s ease; /* Smooth transition for popup */
 }
 
+.dark-mode .popup-content{
+  background-color: #005EB8;
+  
+}
+
+
+.popup-content h3{
+  color: #005EB8;
+}
+
+.dark-mode .popup-content h3{
+  color: white;
+}
+
+
 .close {
   cursor: pointer;
   float: right;
@@ -199,47 +281,65 @@ button:hover {
 
 
 
+/* Filepath: D:\OFFICE_PROJECT\work\src\components\Home.css */
+.loader-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
 
+/* .dark-mode .loader-popup{
+  background-color: #005EB8;
+} */
 
+.loader-popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.dark-mode .loader-popup-content{
+  background-color: #005EB8;
+}
+.loader-popup-content h3{
+  color: #005EB8;
 
+}
 
+.dark-mode .loader-popup-content h3{
+  color: white;
+
+}
+
+.loader-popup-content p{
+  color: black;
+}
+
+.dark-mode .loader-popup-content p{
+  color: white;
+}
 
 /* Filepath: D:\OFFICE_PROJECT\work\src\components\Home.css */
-.file-input {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  position: relative; /* Position for the close icon */
-  width: calc(50% - 10px); /* Adjust width for two fields per row */
-  box-sizing: border-box; /* Include padding in width calculations */
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px; /* Size of the loader */
+  height: 40px; /* Size of the loader */
+  animation: spin 1s linear infinite; /* Animation effect */
+  margin: 20px auto; /* Center the loader */
 }
 
-.file-input .close-icon {
-  margin-left: 10px; /* Space between input and close icon */
-}
-
-input[type="file"] {
-  padding: 10px;
-  border: 2px solid #ccc; /* Light mode border */
-  border-radius: 5px;
-  width: 100%; /* Full width */
-  transition: border-color 0.3s ease; /* Smooth transition for border color */
-}
-
-input[type="file"]:focus {
-  border-color: #2196F3; /* Focus border color */
-}
-
-.dark-mode input[type="file"] {
-  border-color: #777; /* Dark mode border */
-  background-color: #555; /* Dark mode background */
-  color: #ffffff; /* Dark mode text color */
-}
-
-/* Adjust the container for file inputs to allow wrapping */
-.file-inputs-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping of file inputs */
-  gap: 10px; /* Space between inputs */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

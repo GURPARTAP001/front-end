@@ -3,15 +3,22 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    padding: 20px;
-    background-color: #d0d0d0;
+    /* padding: 20px; */
+    background-color: #eaeaea;
     height: 100%;
-    overflow-y:scroll;
+    color: #012a71;
+  }
+
+  .dark-mode .results-container{
+    background-color: #012a71; /* Dark mode background */
+  color: white;
   }
   
   .results-header {
     margin-bottom: 10px;
-    /* background-color: #fff; */
+    display:flex ;
+    align-items: flex-start;
+    margin-left: 4%;
   }
 
   .main-table-container{
@@ -20,23 +27,97 @@
     flex-direction: column;
    /* justify-content:space-around; */
    align-items: center;
+   background-color: #eaeaea;
+   height: 70%;
+  }
+
+  .dark-mode .main-table-container{
+   background-color: #012a71;
+   color: white;
   }
   
   .results-table-container1 {
     height: 40%; /* Set a max height for the table container */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: auto;
     border: 1px solid #ccc; /* Optional: Add a border */
-    background-color: #faf4f4;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     width: 90%;
+    height: 114%;
+    padding-left: 20px;
 
   }
 
-  .results-table-container1 h2{
-    margin-left: 10px;
+  .dark-mode .results-table-container1 {
+    background-color: #005EB8;
+    color: white;
   }
-  
+
+  .results-table-container1-heading{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+  }
+ .results-table-container1-heading h2 {
+  margin-bottom: 0 !important;
+ }
+    
+ .results-table-container1-heading p{
+  color: black;
+ }
+
+ .dark-mode .results-table-container1-heading p{
+  color: white ;
+ }
+
+.results-table-container1-heading-main {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between h2 and button */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Optional padding */
+  /* background-color: black; */
+  width: 98%;
+  color: #005EB8;
+}
+
+.download-btn {
+  background-color: #2196F3; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 10px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* Flexbox for icon and text */
+  align-items: center; /* Center icon vertically */
+}
+
+.download-btn i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.download-btn:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+
+
+
+
+ .results-table-container1-heading-table{
+  position: relative;
+  height: 62%;
+overflow: auto;
+color: black;
+/* background-color: #871010; */
+ }
+
+ .dark-mode .results-table-container1-heading-table{
+  color: white;
+ }
+
   .results-table1 {
     width: 98%;
     margin-top: 10px;
@@ -44,6 +125,14 @@
     margin-left: 10px;
     border-collapse: collapse; /* Collapse borders */
   }
+  
+
+  .results-table1 thead {
+    position: sticky; /* Make the header sticky */
+    top: -1px; /* Stick to the top */
+    background-color: #d5d5d5; /* Light background for header */
+    z-index: 10; /* Ensure it stays above the table body */
+}
   
   .results-table1 th, .results-table1 td {
     border: 1px solid #ccc; /* Add border to table cells */
@@ -54,64 +143,49 @@
   .results-table1 th {
     background-color: #d5d5d5; /* Light background for header */
   }
-
-
-  /* table 2 */
-
-  .results-table-container2 {
-    height: 40%; /* Set a max height for the table container */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: auto;
-    border: 1px solid #ccc; /* Optional: Add a border */
-    background-color: #faf4f4;
-    border-radius: 10px;
-    margin-top: 50px;
-    width: 90%;
-
-  }
-
-  .results-table-container2 h2{
-    margin-left: 10px;
-  }
-  
-  .results-table2 {
-    width: 98%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    border-collapse: collapse; /* Collapse borders */
-  }
-  
-  .results-table2 th, .results-table2 td {
-    border: 1px solid #ccc; /* Add border to table cells */
-    padding: 10px; /* Add padding */
-    text-align: left; /* Align text to the left */
-  }
-  
-  .results-table2 th {
-    background-color: #d5d5d5; /* Light background for header */
-  }
-  
-
-
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
    
+  .dark-mode .results-table1 th{
+   background-color: #6D2077;
   }
+
+
   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    
-  }
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-    
-  }
+
+
+ /* Hide the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  background-color: 0091DA;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blue; /* Change handle color to blue */
+  border-radius: 20px; /* Optional: add rounded corners */
+  height: 20px; /* Decreased height of the scrollbar handle */
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+ background: #0091DA;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkblue; /* Change handle color on hover */
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #005c8b; /* Change handle color on hover */
+}
+
+
+
+
+

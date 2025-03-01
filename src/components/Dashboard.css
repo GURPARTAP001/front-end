@@ -12,7 +12,7 @@
 }
 
 .sidebar {
-  width: 250px;
+  width: 150px;
   background-color: #ffffff; /* Light mode background */
   color: rgb(6, 2, 2);
   display: flex;
@@ -23,13 +23,13 @@
 }
 
 .dark-mode .sidebar {
-  background-color: #222; /* Dark mode background */
+  background-color: #00338D; /* Dark mode background */
   color: #ffffff; /* Light text color */
   border-radius: 0%;
 }
 
 .logo {
-  height: 50px;
+  height: 35px;
   margin: 20px auto; /* Center the logo */
 }
 
@@ -48,7 +48,9 @@
   align-items: center; /* Center align items */
 }
 
+/* Filepath: D:\OFFICE_PROJECT\work\src\components\Dashboard.css */
 .menu li {
+  position: relative; /* Position relative for the pseudo-element */
   margin: 15px 0;
   cursor: pointer;
   text-align: center; /* Center text */
@@ -57,12 +59,33 @@
   transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
+.menu li link.active {
+  color: #005EB8; /* Set active menu item color */
+}
+
+.menu li.active::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute;
+  left: -20px; /* Adjust position to the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center the line */
+  width: 6px; /* Width of the line */
+  height: 100%; /* Full height of the menu item */
+  background-color: blue; /* Color of the line */
+  border-radius: 2px; /* Optional: rounded corners for the line */
+  color: #005EB8
+}
+
+.dark-mode .menu li.active::before{
+  background-color: #0091DA;
+}
+
 .menu li:hover {
   background-color: #f0f0f0; /* Light background on hover */
 }
 
 .dark-mode .menu li:hover {
-  background-color: #444; /* Dark mode hover effect */
+  background-color: #6D2077; /* Dark mode hover effect */
 }
 
 /* Link color styling */
@@ -76,11 +99,12 @@
 }
 
 .dark-mode .menu li a {
-  color: #fff;
+  color: #fff; /* Light text color in dark mode */
 }
 
+
 .main-content {
-  width: calc(100% - 250px); /* Remaining width */
+  width: calc(100% - 150px);
   background-color: #d2d0d0; /* Light mode background */
   display: flex;
   flex-direction: column; /* Ensure content stacks vertically */
@@ -100,18 +124,21 @@
   padding: 10px 20px; /* Optional padding for the navbar */
   border-bottom: 2px solid #ccc; /* Border at the bottom of the navbar */
   height: 50px;
+  color: #00338D;
 }
 
 .dark-mode .navbar {
-  background-color: #444; /* Dark mode navbar */
+  background-color: #00338D; /* Dark mode navbar */
   border-bottom: #222;
+  color: #ffffff;
 }
 
 .content{
-  /* background-color: #280303; */
+  background-color: #d2d0d0;
   position: relative;
   height: 100vh;
-  /* overflow: auto; */
+  overflow: auto;
+
 }
 
 .navbar-items {
@@ -121,24 +148,33 @@
 
 .search-container {
   position: relative; /* Position relative for the search icon */
+  
 }
 
 .search-bar {
   padding: 5px;
-  margin-right: 10px;
   border: 1px solid #ccc; /* Border for the search bar */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 34px; /* Rounded corners */
+  height: 25px;
+  
+}
+
+.search-bar::placeholder {
+  color:#00338D /* Change the placeholder color to blue */
+}
+.dark-mode .search-bar::placeholder {
+  color:#ffffff /* Change the placeholder color to blue */
 }
 
 .dark-mode .search-bar {
-  background-color: #555; /* Dark mode search bar */
+  background-color: #005EB8; /* Dark mode search bar */
   color: #ffffff; /* Light text color */
   border: 1px solid #777; /* Dark mode border */
 }
 
 .search-icon {
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   color: #aaa; /* Icon color */
@@ -149,34 +185,97 @@
 }
 
 .toggle-btn {
+  display: flex;
+  /* align-items: space-evenly; */
+  /* justify-content: space-evenly; */
   padding: 5px 10px;
-  margin-left: 10px;
+  margin-left: 5px;
   cursor: pointer;
   border: 0px solid #ccc; /* Border for buttons */
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s ease; /* Smooth background transition */
-  background-color: #fff; /* Light mode button background */
+  
 }
+.toggle-btn span{
+  margin: 2px;
+}
+
+
 
 .profile-btn{
-  background-color: #d8d5d5;
+  background-color: #fffefe;
   padding: 5px 10px;
   margin-left: 10px;
   cursor: pointer;
   border: 0px solid #ccc; /* Border for buttons */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 20px; /* Rounded corners */
   transition: background-color 0.3s ease; /* Smooth background transition */
+  width: 40px;
+  height: 40px;
 }
 
-.toggle-btn:hover, .profile-btn:hover {
-  background-color: #a1a6d2; /* Light background on hover */
+ .profile-btn:hover {
+  background-color: #eeeff0; /* Light background on hover */
 }
 
-.dark-mode .toggle-btn, .dark-mode .profile-btn {
-  background-color: #555; /* Dark mode button background */
-  color: #ffffff; /* Light text color */
+
+.profile-btn i{
+    color: #00338D;
+}
+.dark-mode .toggle-btn{
+  color: #ffffff;
 }
 
-.dark-mode .toggle-btn:hover, .dark-mode .profile-btn:hover {
-  background-color: #666; /* Dark mode hover effect */
+ .dark-mode .profile-btn {
+  background-color: #fffdfd; /* Dark mode button background */
+  color: #6D2077; /* Light text color */
+}
+
+.dark-mode .profile-btn i{
+  color: #6D2077;
+}
+
+ .dark-mode .profile-btn:hover {
+  background-color: #f0eded; /* Dark mode hover effect */
+}
+
+
+
+
+.bottom-banner {
+  display: flex;
+  justify-content: space-between; /* Space between logo and contact details */
+  align-items: center; /* Center items vertically */
+  /* padding: 10px 20px;  */
+  background-color: #eaeaea; 
+  color: rgb(73, 66, 177); /* Text color */
+  position: relative; /* Position relative for any absolute children */
+  width: 100%;
+  /* margin-top: 10px; */
+  /* bottom: -100px; */
+  height: 100px;
+}
+
+.dark-mode .bottom-banner{
+  background-color: #012a71;
+  color: white;
+}
+
+.footer-logo {
+  height: 40px; /* Adjust logo height */
+  margin-left: 50px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: right; /* Align text to the right */
+  margin-right: 50px;
+}
+
+.contact-details p {
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Font size for contact details */
 }

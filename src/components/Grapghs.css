@@ -1,0 +1,179 @@
+/* Filepath: D:\OFFICE_PROJECT\work\src\components\Grapghs.css */
+.graphs-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 110%;
+    overflow:visible;
+    background-color: #eaeaea;
+  }
+
+  .dark-mode .graphs-container{
+    background-color: #012a71;
+    /* color: white; */
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .cards h3{
+    color:#005EB8 ;
+  }
+  .cards p{
+    color: black;
+  }
+  
+  .dark-mode .cards h3 {
+    color: white;
+  }
+
+  .dark-mode .cards p {
+    color: white;
+  }
+
+
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-inline: 10px;
+    flex: 1; /* Allow cards to grow equally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
+  }
+
+  .dark-mode .card{
+    background-color: #005EB8;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+
+  .graph-box-main{
+    display: flex;
+    position: relative;
+    /* background-color: #0d0c0c; */
+    width: 98%;
+    height: 90%;
+  }
+
+  .graph-box-left{
+         /* background-color: rgb(61, 17, 17); */
+         width: 50%;
+         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+  }
+
+  .graph-box-left-inner{
+    display: flex;
+    justify-Content:space-evenly;
+    height: 45%;
+    width: 100%;
+  }
+  
+  .graph-box1 {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 98%;
+    height: 45%;
+    text-align: center;
+    /* margin-left: 8px; */
+    
+  }
+  .graph-box2 {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* padding: 20px; */
+    width: 48%;
+    text-align: center;
+    /* height: 45%; */
+  }
+  .graph-box3 {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* padding: 20px; */
+    width: 48%;
+    text-align: center;
+  }
+  
+
+  .graph-box-right{
+    /* background-color: rgb(231, 68, 68); */
+    width: 50%;
+         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+}
+
+
+.graph-box4 {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 98%;
+    height: 60%;
+    text-align: center;
+  }
+
+  .graph-box5 {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 98%;
+    height: 30%;
+    text-align: center;
+  }
+
+  .box {
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+.dark-mode .box{
+  background-color: #005EB8;
+}
+
+.box h2{
+  color: #005EB8;
+}
+
+.box p{
+  color: black;
+}
+
+.dark-mode .box h2{
+  color: white;
+}
+
+.dark-mode .box p{
+  color: white;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
+
+

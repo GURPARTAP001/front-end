@@ -7,7 +7,7 @@
   padding: 20px;
   background-color: #eaeaea; /* Light mode background */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
-  height: 100%; 
+  height: 130%; 
   width: 100%; /* Full width */
   box-sizing: border-box; /* Include padding in width/height calculations */
   overflow: visible;
@@ -32,9 +32,9 @@
   color: #005EB8;
 }
 
-.dark-mode .top-container{
-      background-color: #005EB8;
-      color: white;
+.dark-mode .top-container {
+  background-color: #005EB8;
+  color: white;
 }
 
 .content-container {
@@ -43,42 +43,37 @@
   position: relative;
   height: 100%;
   overflow: auto;
-  
 }
 
-
-.content-container h1{
+.content-container h1 {
   margin: 0px;
 }
 
-.content-container p{
+.content-container p {
   margin-top: 10px;
   color: black;
 }
 
-
-.dark-mode .content-container p{
+.dark-mode .content-container p {
   margin-top: 10px;
   color: white;
 }
 
 .image-container {
-  /* background-color: black; */
   display: flex;
   position: relative;
   flex: 0 0 auto; /* Prevent this div from growing */
   height: 90%; /* Ensure the image container does not exceed the top container */
   width: 30%;
-  overflow:hidden; /* Hide overflow if the image is too large */
-  object-fit:cover;
- justify-content: center;
+  overflow: hidden; /* Hide overflow if the image is too large */
+  object-fit: cover;
+  justify-content: center;
 }
 
 .image-container img {
   width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 5px; /* Optional: Add rounded corners */
-  
 }
 
 .bottom-container {
@@ -89,29 +84,32 @@
   margin-top: 10px;
   position: relative;
   width: 100%;
-  /* height: 45%; */
   background-color: #ffffff; /* Light mode background */
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  padding: 20px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   box-sizing: border-box; /* Include padding in width calculations */
   z-index: 1;
+  height: 70%;
+  /* background-color: #991a1a; */
 }
 
 
-.bottom-container-heading{
- display: flex;
- align-items:flex-start;
- /* background-color: #a11e1e; */
- width: 100%;
- 
+
+.bottom-container-heading {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  width: 100%;
+  height: 20%;
+  /* background-color: #fff; */
 }
 
 .bottom-container h2 {
-  margin: 0; /* Remove margin for h2 */
+  margin-left: 33px; /* Remove margin for h2 */
   text-align: center; /* Center align the heading text */
   color: #005EB8;
+  margin-top: 15px;
 }
 
 .dark-mode .bottom-container {
@@ -120,33 +118,98 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Dark mode shadow */
 }
 
-
-
 .dark-mode h2 {
   color: #ffffff; /* Dark mode text color */
 }
 
+.file-inputs-container {
+  display: flex;
+  position: relative;
+  justify-content: space-between; /* Space between the two containers */
+  width: 95%; /* Full width */
+  height: 50%;
+}
+
+.left-container{
+  align-items: center;
+  border: 1px solid #005EB8;
+  border-radius: 40px;
+ 
+}
+
+.dark-mode .left-container{
+  border: 1px solid #00338D;
+}
+
+.dark-mode .left-container h3{
+  color: white;
+}
+
+.right-container{
+  margin-left: 30px;
+  border: 1px solid #005EB8;
+  border-radius: 40px;
+}
+  
+.dark-mode .right-container{
+  color: white;
+  border: 1px solid #00338D;
+}
+
+.dark-mode .right-container h3{
+  color:white
+}
+
+
+.file-input-container {
+  display: flex;
+  position: relative;
+  flex-direction: column; /* Stack items vertically */
+  width: 50%; /* Adjust width as needed */
+  height: 100%;
+  margin-right: 10px;
+}
+
+.file-input-row {
+  display: flex; /* Align items horizontally */
+  position: relative;
+  justify-content: space-between; /* Space between the two inputs */
+  /* margin-bottom: 15px;  */
+  height: 100%;
+  /* margin-bottom: 5px; */
+}
+
+.file-input-container h3 {
+  text-align: center; /* Center align the heading text */
+  color: #005EB8; /* Heading color */
+  margin-top: 3px;
+
+}
+
 .file-input {
   display: flex;
+  position: relative;
   align-items: center;
   margin-bottom: 15px;
   position: relative; /* Position for the close icon */
   width: 100%; /* Full width for better alignment */
-  max-width: 400px; /* Optional: Set a max width for file inputs */
   box-sizing: border-box; /* Include padding in width calculations */
+  flex-direction: column; /* Stack label and input vertically */
+    width: 48%; /* Adjust width for each input */
+    height: 30%;
 }
 
-.file-input .close-icon {
-  margin-left: 10px; /* Space between input and close icon */
+.file-input label {
+  margin-right: 10px; /* Space between label and input */
+  margin-bottom: 5px;
 }
 
 input[type="file"] {
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #00338D; /* Light mode border */
   border-radius: 20px;
-  width: 100%; /* Full width for better alignment */
+  width: 85%; /* Full width for better alignment */
   transition: border-color 0.3s ease; /* Smooth transition for border color */
-  
 }
 
 input[type="file"]::file-selector-button {
@@ -154,56 +217,14 @@ input[type="file"]::file-selector-button {
   color: white; /* Text color for the button */
   border: none; /* Remove border */
   border-radius: 20px; 
-  padding: 3px; 
+  padding: 5px; 
   padding-inline: 10px;
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-.dark-mode input[type="file"]::file-selector-button{
+.dark-mode input[type="file"]::file-selector-button {
   background-color: #6D2077;
-}
-
-
-
-input[type="file"]:focus {
-  border-color: #2196F3; /* Focus border color */
-}
-
-.dark-mode input[type="file"] {
-  border-color: #ffffff; /* Dark mode border */
-  background-color: #005EB8; /* Dark mode background */
-  color: #ffffff; /* Dark mode text color */
-}
-
-/* Adjust the container for file inputs to allow wrapping */
-.file-inputs-container {
-  display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  flex-wrap: wrap; /* Allow wrapping of file inputs */
-  gap: 10px; /* Space between inputs */
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-
-
-.close-icon {
-  position: absolute;
-  right: 10px;
-  cursor: pointer;
-  color: #ff4d4d; /* Red color for the close icon */
-  font-size: 18px;
-  transition: color 0.3s ease; /* Smooth transition for icon color */
-}
-
-.close-icon:hover {
-  color: #ff1a1a; /* Darker red on hover */
-}
-
-.dark-mode .close-icon {
-  color: #ff9999; /* Light red for dark mode */
 }
 
 button {
@@ -216,6 +237,9 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
 }
 
+.upload{
+  margin-top: 40px;
+}
 
 button:hover {
   background-color: #005EB8; /* Darker blue on hover */

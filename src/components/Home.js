@@ -60,14 +60,17 @@
 //       setUploadedFiles(result.files); // Assuming the response contains the uploaded files
 //       setShowPopup(true); // Show the popup on successful upload
 
-//       // Show loader popup
-//       setShowLoader(true);
+//       // Show loader popup after a short delay
+//       setTimeout(() => {
+//         setShowPopup(false); // Hide success popup
+//         setShowLoader(true); // Show loader popup
+//       }, 1000); // Adjust the delay as needed
 
 //       // Simulate result generation time
 //       setTimeout(() => {
 //         setShowLoader(false); // Hide loader
 //         navigate('/results'); // Redirect to results page
-//       }, 2000); // Adjust the delay as needed
+//       }, 6000); // Adjust the delay as needed
 
 //       // Clear the file inputs
 //       setFiles(Array(6).fill(null));
@@ -77,9 +80,6 @@
 //     }
 //   };
 
-//   const closePopup = () => {
-//     setShowPopup(false); // Close the popup
-//   };
 
 //   return (
 //     <div className="home-container">
@@ -102,12 +102,6 @@
 //                 accept=".xlsx, .xls"
 //                 onChange={(event) => handleFileChange(index, event)}
 //               />
-//               {/* Uncomment if you want to show the remove button */}
-//               {/* {file && (
-//                 <span className="close-icon" onClick={() => removeFile(index)}>
-//                   &times; 
-//                 </span>
-//               )} */}
 //             </div>
 //           ))}
 //         </div>
@@ -118,12 +112,11 @@
 //         {showPopup && (
 //           <div className="popup">
 //             <div className="popup-content">
-//               <span className="close" onClick={closePopup}>&times;</span>
 //               <h3>Files Uploaded Successfully!</h3>
-//               <p>Your files have been uploaded.</p>
+//               <i className="fas fa-check-circle" style={{ color: 'green', marginRight: '10px', height:'20px',fontSize: '40px' }}></i>
 //             </div>
 //           </div>
-//         )}
+//           )} 
 
 //         {/* Loader Popup */}
 //         {showLoader && (
@@ -131,16 +124,16 @@
 //             <div className="loader-popup-content">
 //               <h3>Generating Results...</h3>
 //               <p>Please wait.</p>
+//               <div className="loader"></div> {/* Add a loader animation here */}
 //             </div>
 //           </div>
-//         )}
+//          )}  
 //       </div>
 //     </div>
 //   );
 // }
 
 // export default Home;
-
 
 
 
@@ -226,7 +219,6 @@ function Home() {
     }
   };
 
-
   return (
     <div className="home-container">
       <div className='top-container'>
@@ -241,28 +233,78 @@ function Home() {
       <div className='bottom-container'>
         <div className='bottom-container-heading'><h2>Upload Excel Sheets</h2></div>
         <div className="file-inputs-container">
-          {files.map((file, index) => (
-            <div key={index} className="file-input">
+          <div className="file-input-container left-container">
+            <h3>Baseline Files</h3>
+            <div className="file-input">
+              <label>SOD Risk:-</label>
               <input
                 type="file"
                 accept=".xlsx, .xls"
-                onChange={(event) => handleFileChange(index, event)}
+                onChange={(event) => handleFileChange(0, event)}
               />
             </div>
-          ))}
+            <div className="file-input">
+              <label>Function Permission:-</label>
+              <input
+                type="file"
+                accept=".xlsx, .xls"
+                onChange={(event) => handleFileChange(1, event)}
+              />
+            </div>
+          </div>
+          <div className="file-input-container right-container">
+            <h3>Core Input Files</h3>
+            <div className="file-input-row">
+              <div className="file-input">
+                <label>AGR_TCODES:-</label>
+                <input
+                  type="file"
+                  accept=".xlsx, .xls"
+                  onChange={(event) => handleFileChange(2, event)}
+                />
+              </div>
+              <div className="file-input">
+                <label>USR02:-</label>
+                <input
+                  type="file"
+                  accept=".xlsx, .xls"
+                  onChange={(event) => handleFileChange(3, event)}
+                />
+              </div>
+            </div>
+            <div className="file-input-row">
+              <div className="file-input">
+                <label>AGR_1251:-</label>
+                <input
+                  type="file"
+                  accept=".xlsx, .xls"
+                  onChange={(event) => handleFileChange(4, event)}
+                />
+              </div>
+              <div className="file-input">
+                <label>AGR_USER:-</label>
+                <input
+                  type="file"
+                  accept=".xlsx, .xls"
+                  onChange={(event) => handleFileChange(5, event)}
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <button onClick={handleUpload}>Upload</button>
+        <button onClick={handleUpload} className='upload'>Upload</button>
 
         {/* Popup for successful upload */}
         {showPopup && (
           <div className="popup">
             <div className="popup-content">
               <h3>Files Uploaded Successfully!</h3>
-              <i className="fas fa-check-circle" style={{ color: 'green', marginRight: '10px', height:'20px',fontSize: '40px' }}></i>
+              <i className="fas fa-check-circle" style={{ color: 'green', marginRight: '10px', height: '20px', fontSize: '40px' }}></i>
             </div>
           </div>
-          )} 
+        )}
 
         {/* Loader Popup */}
         {showLoader && (
@@ -273,11 +315,10 @@ function Home() {
               <div className="loader"></div> {/* Add a loader animation here */}
             </div>
           </div>
-         )}  
+        )}
       </div>
     </div>
   );
 }
 
 export default Home;
-

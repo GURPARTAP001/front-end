@@ -10,7 +10,7 @@ import logo1 from '../Images/kpmg-logo-light.png'; // Light mode logo
 import logo2 from '../Images/kpmg-logo-dark.png'; // Dark mode logo
 
 function Navbar() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
     const location = useLocation(); // Get the current location
 
     const toggleDarkMode = () => {
@@ -63,7 +63,10 @@ function Navbar() {
                             <Route path="/graphs" element={<Grapghs />} />
                         </Routes>
                         <div className='bottom-banner'>
+                            <div style={{display:"flex"}}>
                             <img src={isDarkMode ? logo2 : logo1} alt="Company Logo" className="footer-logo" />
+                            <div><p class="footer-text">© 2025 KPMG Assurance and Consulting Services LLP, an Indian Limited Liability Partnership and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International Limited, a private English company limited by guarantee. All rights reserved.</p></div>
+                            </div>
                             <div className="contact-details">
                                 <p><strong>Contact Us</strong></p>
                                 <p><i className="fas fa-envelope"></i> <strong>Email:info@company.com</strong> </p>

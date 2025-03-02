@@ -169,7 +169,7 @@
 .dark-mode .search-bar {
   background-color: #005EB8; /* Dark mode search bar */
   color: #ffffff; /* Light text color */
-  border: 1px solid #777; /* Dark mode border */
+  border: 1px solid #ffffff; /* Dark mode border */
 }
 
 .search-icon {
@@ -248,12 +248,11 @@
   align-items: center; /* Center items vertically */
   /* padding: 10px 20px;  */
   background-color: #eaeaea; 
-  color: rgb(73, 66, 177); /* Text color */
+  color: #00338D ;
   position: relative; /* Position relative for any absolute children */
   width: 100%;
-  /* margin-top: 10px; */
-  /* bottom: -100px; */
   height: 100px;
+  /* margin-top: 10px; */
 }
 
 .dark-mode .bottom-banner{
@@ -266,13 +265,28 @@
   margin-left: 50px;
 }
 
+.footer-text {
+  font-size: 10px; /* Adjust the size as needed */
+  line-height: 1.5; /* Optional: Adjust line height for better readability */
+  color: #00338D; /* Optional: Change text color if needed */
+  margin-left: 10px;
+  margin-right: 10px;
+  /* background-color: #fff; */
+}
+
+.dark-mode .footer-text {
+  color: white;
+}
+
 .contact-details {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: right; /* Align text to the right */
-  margin-right: 50px;
+  margin-right: 40px;
+  width: 320px;
+  /* background-color: #fff; */
 }
 
 .contact-details p {

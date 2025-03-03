@@ -1,67 +1,42 @@
-// Filepath: D:\OFFICE_PROJECT\work\src\components\Grapghs.js
 import React from 'react';
 import './Grapghs.css'; // Import the CSS file for styling
+import graph1 from '../Images/graph1.jpg'; // Import the image
+import graph2 from '../Images/graph2.jpg'; // Import the image
+import graph3 from '../Images/graph3.jpg'; // Import the image
+import graph4 from '../Images/graph4.jpg'; // Import the image
 
 function Grapghs() {
   return (
     <div className="graphs-container">
-      {/* <div className="cards">
-        <div className="card">
-          <h3>Analytics 1</h3>
-          <p>Value: 120</p>
-        </div>
-        <div className="card">
-          <h3>Analytics 2</h3>
-          <p>Value: 80</p>
-        </div>
-        <div className="card">
-          <h3>Analytics 3</h3>
-          <p>Value: 200</p>
-        </div>
-        <div className="card">
-          <h3>Analytics 4</h3>
-          <p>Value: 150</p>
-        </div>
-      </div> */}
-
       <div className='graph-box-main'>
         <div className='graph-box-left'>
-          <div className="graph-box1 box ">
-            {/* Placeholder for graphs */}
-            <h2>Graphs Section</h2>
-            <p>Various graphs will be displayed here.</p>
+          <div className="graph-box1 box">
+            <h2>Graphs Section 1</h2>
+            <img src={graph1} alt="Graph 1" className="graph-image" />
           </div>
-            <div className="graph-box1 box">
-              {/* Placeholder for graphs */}
-              <h2>Graphs Section</h2>
-              <p>Various graphs will be displayed here.</p>
-            </div>
-          
-
+          <div className="graph-box1 box">
+            <h2>Graphs Section 2</h2>
+            <img src={graph2} alt="Graph 2" className="graph-image" />
+           </div>
         </div>
 
         <div className='graph-box-right'>
           <div className="graph-box1 box">
-            {/* Placeholder for graphs */}
-            <h2>Graphs Section</h2>
-            <p>Various graphs will be displayed here.</p>
-          </div>
+            <h2>Graphs Section 3</h2>
+            <img src={graph3} alt="Graph 3" className="graph-image" />
+           </div>
           <div className="graph-box1 box">
-            {/* Placeholder for graphs */}
-            <h2>Graphs Section</h2>
-            <p>Various graphs will be displayed here.</p>
-          </div>
-
+            <h2>Graphs Section 4</h2>
+            <img src={graph4} alt="Graph 4" className="graph-image" />
+           </div>
         </div>
       </div>
-
-      
-
     </div>
   );
 }
 
 export default Grapghs;
+
 
 
 

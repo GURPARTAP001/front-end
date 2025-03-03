@@ -85,7 +85,7 @@ function Home() {
       <div className='top-container'>
         <div className='content-container'>
           <h1>About the SOD TOOL</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque dicta asperiores explicabo, possimus obcaecati quibusdam sit adipisci recusandae deserunt quis! Iusto praesentium accusamus quaerat perspiciatis offic </p>
+          <p>The SoD Risk Assessment Tool identifies and mitigates segregation of duties conflicts, ensuring compliance and robust security. With automated risk analysis and detailed reporting, it enhances fraud prevention and operational integrity. Engineered for precision and efficiency, it strengthens internal controls and governance frameworks</p>
         </div>
         <div className='image-container'>
           <img src={image1} alt="description" />
@@ -155,7 +155,7 @@ function Home() {
 
         </div>
 
-        <button onClick={handleUpload} className='upload'>Upload</button>
+        <button onClick={handleUpload} className='upload'>Generate Output</button>
 
         {/* Popup for successful upload */}
         {showPopup && (

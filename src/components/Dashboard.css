@@ -3,7 +3,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .dark-mode .dashboard{
@@ -110,6 +110,7 @@
   flex-direction: column; /* Ensure content stacks vertically */
   height: 100vh; /* Full height */
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow on the right */
+  overflow: auto;
 }
 
 .dark-mode .main-content {

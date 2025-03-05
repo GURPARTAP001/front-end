@@ -15,53 +15,75 @@
     /* color: white; */
   }
   
-  /* .cards {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .cards h3{
-    color:#005EB8 ;
-  }
-  .cards p{
-    color: black;
-  }
   
-  .dark-mode .cards h3 {
-    color: white;
-  }
-
-  .dark-mode .cards p {
-    color: white;
-  } */
-
-
-  /* .card {
-    background-color: #ffffff;
+  .graph-box-top{
+    position: relative;
+    height: 25%;
+    width: 60%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
+    margin-top: -10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-inline: 10px;
-    flex: 1; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .dark-mode .card{
+  .graph-box-top:hover{
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+
+  .graph-box-top{
+
+  }
+
+  .dark-mode .graph-box-top{
+    color: #fff;
     background-color: #005EB8;
   }
-  
-  .card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
-  } */
+
+  .graph-box-top h2{
+    margin-top :5px;
+    margin-bottom: 0px;
+    color: black;
+  }
+
+  .dark-mode .graph-box-top h2{
+    color: #fff;
+  }
+
+
+  .top-box{
+    position: relative;
+    height: 60%;
+    width: 100%;
+    /* margin-bottom: 10px; */
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+
+  .graph-box-top img{
+    /* margin-top: 10px; */
+    position: relative;
+    height: 100%;
+    width: 90%;
+  }
+
 
   .graph-box-main{
     display: flex;
     position: relative;
     width: 98%;
-    height: 90%;
+    height: 85%;
+    /* background-color: #fff; */
   }
 
   .graph-box-left{
@@ -87,7 +109,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 98%;
-    height: 45%;
+    height: 48%;
     text-align: center;
     /* margin-left: 8px; */
     
@@ -152,8 +174,14 @@
 .box img{
   margin-top: -10px;
   position: relative;
-  height: 70%;
-  width: auto;
+  height: 80%;
+  width: 80%;
+  /* margin-bottom: 10px; */
+}
+
+.box h2{
+  margin-top: 5px;
+  margin-bottom:20px ;
 }
 
 .dark-mode .box{

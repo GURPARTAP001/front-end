@@ -183,6 +183,10 @@
   color: #005EB8;
 }
 
+.dark-mode .file-input label{
+  color: #ffffff;
+}
+
 input[type="file"] {
   width: 95%;
   padding: 8px;
